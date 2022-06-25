@@ -5,8 +5,14 @@ import logo from '../images/logo.png';
 export default function PageHeader() {
   return (
     <header>
-      <Box bg="blue">
-        <Image src={logo} alt="sil-sistemas-logo" />
+      <Box bg="#63B3ED" borderTopRadius="30" m={1} minH="150px">
+        <Image
+          src={logo}
+          pos="absolute"
+          top="5"
+          left="30vh"
+          alt="sil-sistemas-logo"
+        />
       </Box>
     </header>
   );
