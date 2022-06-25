@@ -6,7 +6,7 @@ export default function PageHeader() {
   return (
     <header>
       <Box bg="blue">
-        <Image src={logo} alt="logo" />
+        <Image src={logo} alt="sil-sistemas-logo" />
       </Box>
     </header>
   );
