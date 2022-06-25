@@ -6,9 +6,9 @@ createServer({
   routes() {
     this.namespace = 'api';
 
-    this.get('/data/rj', () => ({ cases: '2.316.183' } as CasesInterface));
-    this.get('/data/sp', () => ({ cases: '5.665.324' } as CasesInterface));
-    this.get('/data/mg', () => ({ cases: '3.572.319' } as CasesInterface));
+    this.get('/cases/rj', () => ({ cases: '2.316.183' } as CasesInterface));
+    this.get('/cases/sp', () => ({ cases: '5.665.324' } as CasesInterface));
+    this.get('/cases/mg', () => ({ cases: '3.572.319' } as CasesInterface));
     this.get('/posts/wallstreetbets', () => ([
       { postTitle: 'Now I know where to put mu money', views: 52140 },
       { postTitle: 'Here is one of us, and frankly he should business', views: 17757 },
