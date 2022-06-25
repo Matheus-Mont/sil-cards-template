@@ -5,7 +5,7 @@ import logo from '../images/logo.png';
 export default function PageHeader() {
   return (
     <header>
-      <Box bg="#63B3ED" borderTopRadius="30" m={1} minH="150px">
+      <Box bg="#63B3ED" borderTopRadius="30" m={2} h="20vh">
         <Image
           src={logo}
           pos="absolute"
