@@ -1,13 +1,9 @@
 import { Link } from '@chakra-ui/react';
 import React from 'react';
 import { HiArrowRight } from 'react-icons/hi';
+import CardLinkInterface from '../services/interfaces/cardLinkInterface';
 
-interface CardLink {
-  text: string;
-  href: string;
-}
-
-export default function CardLink({ text, href }: CardLink) {
+export default function CardLink({ text, href }: CardLinkInterface) {
   return (
     <Link href={href}>
       {text}

@@ -1,14 +1,9 @@
 import React from 'react';
 import { Flex, Select, Text } from '@chakra-ui/react';
 import CardHeaderIcon from './CardHeaderIcon';
+import CardHeaderInterface from '../services/interfaces/cardHeaderInterface';
 
-interface CardHeader {
-  icon: string;
-  title: string;
-  options: string[];
-}
-
-export default function CardHeader({ icon, title, options }: CardHeader) {
+export default function CardHeader({ icon, title, options }: CardHeaderInterface) {
   return (
     <Flex>
       <CardHeaderIcon icon={icon} />

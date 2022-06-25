@@ -1,10 +1,7 @@
 import React from 'react';
 import { AiOutlineEye, AiOutlineUnorderedList } from 'react-icons/ai';
+import IconInterface from '../services/interfaces/iconInterface';
 
-interface Icon {
-  icon: string;
-}
-
-export default function CardHeaderIcon({ icon }: Icon) {
+export default function CardHeaderIcon({ icon }: IconInterface) {
   return icon === 'eye' ? <AiOutlineEye /> : <AiOutlineUnorderedList />;
 }
