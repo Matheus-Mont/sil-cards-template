@@ -1,13 +1,22 @@
 import React from 'react';
 import { Flex, Select, Text } from '@chakra-ui/react';
+import CardHeaderIcon from './CardHeaderIcon';
 
-export default function CardHeader() {
+interface CardHeader {
+  icon: string;
+  title: string;
+  options: string[];
+}
+
+export default function CardHeader({ icon, title, options }: CardHeader) {
   return (
     <Flex>
-      Icon
-      <Text>Title</Text>
+      <CardHeaderIcon icon={icon} />
+      <Text>{title}</Text>
       <Select>
-        <option>Option 1</option>
+        {options.map((option) => (
+          <option key={option} value={option.toLocaleLowerCase()}>{option}</option>
+        ))}
       </Select>
     </Flex>
   );
