@@ -22,6 +22,7 @@ export default function GeneralCard({ header, link, type }: GeneralCardInterface
       .get(`/${type}/${(value).toLowerCase()}`)
       .then(({ data }) => {
         setIsLoading(false);
+        setErrLoading(false);
         setContent(data);
       })
       .catch(() => {
@@ -32,6 +33,10 @@ export default function GeneralCard({ header, link, type }: GeneralCardInterface
 
   const newSearch = ({ target }: React.ChangeEvent<HTMLSelectElement>) => {
     apiRequest(target.value);
+  };
+
+  const buttonSearch = ({ target }: React.MouseEvent<HTMLButtonElement>) => {
+    apiRequest((target as HTMLButtonElement).name);
   };
   useEffect(() => {
     apiRequest('RJ');
@@ -49,10 +54,11 @@ export default function GeneralCard({ header, link, type }: GeneralCardInterface
           newSearch={newSearch}
         />
 
-        {isLoading && !errLoading ? <Text>Carregando...</Text> : (
-          <GeneralCardMainContent content={content} />)}
+        {errLoading && <ErrorScreen value={dataValue} newSearch={buttonSearch} />}
 
-        {errLoading && <ErrorScreen value={dataValue} apiRequest={apiRequest} />}
+        {isLoading && !errLoading ? <Text>Carregando...</Text> : null }
+
+        {!isLoading && !errLoading && type === 'cases' ? <GeneralCardMainContent content={content} /> : null}
 
         <CardLink text={link.text} href={link.href} />
 
