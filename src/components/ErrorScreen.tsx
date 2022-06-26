@@ -4,15 +4,15 @@ import { RiErrorWarningFill } from 'react-icons/ri';
 
 interface ErrorInterface {
   value: string;
-  apiRequest: (value: string) => void;
+  newSearch: ({ target }: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export default function ErrorScreen({ value, apiRequest }: ErrorInterface) {
+export default function ErrorScreen({ value, newSearch }: ErrorInterface) {
   return (
     <Flex>
       <RiErrorWarningFill />
       <Text>Request failed!</Text>
-      <Button onClick={() => apiRequest(value)}>Reload</Button>
+      <Button name={value} onClick={newSearch}>Reload</Button>
     </Flex>
   );
 }
