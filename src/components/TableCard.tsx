@@ -6,31 +6,39 @@ import GeneralCardInterface from '../services/interfaces/generalCardInterface';
 import api from '../services/axios/api';
 import CardPostTable from './CardPostTable';
 import PostsInterface from '../services/interfaces/postsInterface';
+import ErrorScreen from './ErrorScreen';
 
 export default function TableCard({ header, link, type }: GeneralCardInterface) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [errLoading, setErrLoading] = useState<boolean>(false);
-  const [content, setContent] = useState<Array<PostsInterface>>([{ postTitle: '', views: 0 }]);
+  const [content, setContent] = useState <Array<PostsInterface>>([{ postTitle: '', views: 0 }]);
+  const [dataValue, setDataValue] = useState<string>('');
 
   const apiRequest = (value:string) => {
     setIsLoading(true);
     setErrLoading(false);
+    setDataValue(value);
     api
       .get(`/${type}/${(value).toLowerCase()}`)
       .then(({ data }) => {
         setIsLoading(false);
+        setErrLoading(false);
         setContent(data);
       })
-      .catch((error) => {
+      .catch(() => {
         setIsLoading(false);
         setErrLoading(true);
-        console.log(error);
       });
+  };
+
+  const buttonSearch = ({ target }: React.MouseEvent<HTMLButtonElement>) => {
+    apiRequest((target as HTMLButtonElement).name);
   };
 
   const newSearch = ({ target }: React.ChangeEvent<HTMLSelectElement>) => {
     apiRequest(target.value);
   };
+
   useEffect(() => {
     apiRequest('Wallstreetbets');
   }, []);
@@ -46,11 +54,11 @@ export default function TableCard({ header, link, type }: GeneralCardInterface) 
           select={header.select}
           newSearch={newSearch}
         />
+        {errLoading && <ErrorScreen value={dataValue} newSearch={buttonSearch} />}
 
-        {isLoading && !errLoading ? <Text>Carregando...</Text> : (
-          <CardPostTable content={content} />)}
+        {isLoading && !errLoading ? <Text>Carregando...</Text> : null }
 
-        {errLoading && <Text>Erro ao carregar</Text>}
+        {!isLoading && !errLoading ? <CardPostTable content={content} /> : null}
 
         <CardLink text={link.text} href={link.href} />
 
