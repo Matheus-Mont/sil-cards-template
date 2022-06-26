@@ -1,9 +1,7 @@
-import React from 'react';
-import PostsInterface from './postsInterface';
+import CasesInterface from './casesInterface';
 
 interface MainContentInterface {
-  content: string | Array<PostsInterface>;
-  newSearch: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  content: CasesInterface;
 }
 
 export default MainContentInterface;
