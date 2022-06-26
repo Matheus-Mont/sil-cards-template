@@ -17,16 +17,17 @@ export default function SpecialCard({ link }: SpecialCardInterface) {
         p={4}
         m={2}
       >
-      <Flex>
-        <AiTwotoneStar />
-        <Text>Trustpilot</Text>
-        <Text>
+        <Flex alignItems="center">
+          <AiTwotoneStar color="#48BB78" size="3vh" />
+          <Text fontWeight="bold" fontSize="lg" ml="1">Trustpilot</Text>
+        </Flex>
+        <Text maxWidth="70%" fontSize="sm">
           Show us love bu leaving a
-          <span style={{ color: 'green' }}> positivo</span>
+          <span style={{ color: '#48BB78' }}> positive</span>
           {' '}
           review on trust pilot and recieve the extension of 50 additional products.
         </Text>
-        <CardLink text={link.text} href={link.href} />
+        <CardLink text={link.text} href={link.href} color="#48BB78" />
       </Flex>
     </article>
   );
