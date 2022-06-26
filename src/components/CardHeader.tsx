@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Flex, Select, Text } from '@chakra-ui/react';
 import CardHeaderIcon from './CardHeaderIcon';
 import CardHeaderInterface from '../services/interfaces/cardHeaderInterface';

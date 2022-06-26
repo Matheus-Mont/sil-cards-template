@@ -4,8 +4,6 @@ import CardHeader from './CardHeader';
 import CardLink from './CardLink';
 import GeneralCardInterface from '../services/interfaces/generalCardInterface';
 import api from '../services/axios/api';
-import GeneralCardMainContent from './GeneralCardMainContent';
-import CasesInterface from '../services/interfaces/casesInterface';
 import CardPostTable from './CardPostTable';
 import PostsInterface from '../services/interfaces/postsInterface';
 

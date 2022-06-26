@@ -24,10 +24,9 @@ export default function GeneralCard({ header, link, type }: GeneralCardInterface
         setIsLoading(false);
         setContent(data);
       })
-      .catch((error) => {
+      .catch(() => {
         setIsLoading(false);
         setErrLoading(true);
-        console.log(error);
       });
   };
 
