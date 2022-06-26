@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Center, Flex, Select, Text,
 } from '@chakra-ui/react';
+import { MdArrowDropDown } from 'react-icons/md';
 import CardHeaderIcon from './CardHeaderIcon';
 import CardHeaderInterface from '../services/interfaces/cardHeaderInterface';
 
@@ -16,7 +17,15 @@ export default function CardHeader({
       </Flex>
       {select && (
       <Center>
-        <Select variant="unstyled" color="gray.500" fontWeight="bold" fontSize="sm" size="lg" onChange={newSearch}>
+        <Select
+          variant="unstyled"
+          color="gray.500"
+          fontWeight="bold"
+          fontSize="sm"
+          size="lg"
+          icon={<MdArrowDropDown />}
+          onChange={newSearch}
+        >
           {options.map((option) => (
             <option key={option} value={option.toLocaleLowerCase()}>{option}</option>
           ))}
