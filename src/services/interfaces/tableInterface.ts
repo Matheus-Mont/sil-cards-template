@@ -1,7 +1,7 @@
 import PostsInterface from './postsInterface';
 
 interface TableInterface {
-  posts: Array<PostsInterface>,
+  content: Array<PostsInterface>,
 }
 
 export default TableInterface;
