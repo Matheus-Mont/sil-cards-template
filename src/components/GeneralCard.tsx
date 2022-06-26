@@ -6,15 +6,18 @@ import GeneralCardInterface from '../services/interfaces/generalCardInterface';
 import api from '../services/axios/api';
 import GeneralCardMainContent from './GeneralCardMainContent';
 import CasesInterface from '../services/interfaces/casesInterface';
+import ErrorScreen from './ErrorScreen';
 
 export default function GeneralCard({ header, link, type }: GeneralCardInterface) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [errLoading, setErrLoading] = useState<boolean>(false);
   const [content, setContent] = useState<CasesInterface>({ cases: '' });
+  const [dataValue, setDataValue] = useState<string>('');
 
   const apiRequest = (value:string) => {
     setIsLoading(true);
     setErrLoading(false);
+    setDataValue(value);
     api
       .get(`/${type}/${(value).toLowerCase()}`)
       .then(({ data }) => {
