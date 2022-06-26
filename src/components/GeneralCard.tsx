@@ -50,7 +50,7 @@ export default function GeneralCard({ header, link, type }: GeneralCardInterface
         {isLoading && !errLoading ? <Text>Carregando...</Text> : (
           <GeneralCardMainContent content={content} />)}
 
-        {errLoading && <Text>Erro ao carregar</Text>}
+        {errLoading && <ErrorScreen value={dataValue} apiRequest={apiRequest} />}
 
         <CardLink text={link.text} href={link.href} />
 
