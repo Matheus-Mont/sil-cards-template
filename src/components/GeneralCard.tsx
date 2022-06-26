@@ -26,9 +26,15 @@ export default function GeneralCard({ header, link, type }: GeneralCardInterface
     setIsLoading(true);
     setErrLoading(false);
     const a = api
-      .get(`/api/${type}/${target.value}`)
+      .get(`/api/${type}/${(target.value).toLowerCase()}`)
       .then(({ data }) => {
-
+        setIsLoading(false);
+        setContent(data);
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        setErrLoading(true);
+        console.log(error);
       });
   };
 
@@ -45,7 +51,8 @@ export default function GeneralCard({ header, link, type }: GeneralCardInterface
           options={header.options}
           select={header.select}
         />
-        <GeneralCardMainContent content={content} />
+        {isLoading && !errLoading ? <Text>Carregando...</Text> : (
+          <GeneralCardMainContent content={content} />)}
         <CardLink text={link.text} href={link.href} />
       </Flex>
     </article>
