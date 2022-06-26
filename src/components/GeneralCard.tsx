@@ -52,7 +52,8 @@ export default function GeneralCard({ header, link, type }: GeneralCardInterface
           select={header.select}
         />
         {isLoading && !errLoading ? <Text>Carregando...</Text> : (
-          <GeneralCardMainContent content={content} newSearch={newSearch} />)}
+          <GeneralCardMainContent content={content} />)}
+        {errLoading && <Text>Erro ao carregar</Text>}
         <CardLink text={link.text} href={link.href} />
       </Flex>
     </article>
