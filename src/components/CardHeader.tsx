@@ -4,7 +4,7 @@ import CardHeaderIcon from './CardHeaderIcon';
 import CardHeaderInterface from '../services/interfaces/cardHeaderInterface';
 
 export default function CardHeader({
-  icon, title, options, select,
+  icon, title, options, select, newSearch,
 }: CardHeaderInterface) {
   return (
     <Flex>
