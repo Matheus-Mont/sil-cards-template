@@ -44,7 +44,16 @@ export default function GeneralCard({ header, link, type }: GeneralCardInterface
 
   return (
     <article>
-      <Flex>
+      <Flex
+        borderRadius="10"
+        direction="column"
+        boxShadow="xl"
+        w="40vh"
+        h="30vh"
+        bg="white"
+        p={4}
+        m={2}
+      >
 
         <CardHeader
           icon={header.icon}
