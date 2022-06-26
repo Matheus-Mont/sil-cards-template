@@ -6,8 +6,7 @@ import MainContentInterface from '../services/interfaces/mainContentInterface';
 export default function GeneralCardMainContent({ content }: MainContentInterface) {
   return (
     <div>
-      {typeof content === 'string' ? (
-        <Text>{content}</Text>) : (<CardPostTable posts={content} />)}
+      <Text>{content.cases}</Text>
     </div>
   );
 }
