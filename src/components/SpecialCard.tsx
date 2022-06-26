@@ -7,6 +7,16 @@ import SpecialCardInterface from '../services/interfaces/specialCardInterface';
 export default function SpecialCard({ link }: SpecialCardInterface) {
   return (
     <article>
+      <Flex
+        borderRadius="10"
+        direction="column"
+        boxShadow="xl"
+        w="50vh"
+        color="white"
+        bg="#1A365D"
+        p={4}
+        m={2}
+      >
       <Flex>
         <AiTwotoneStar />
         <Text>Trustpilot</Text>
