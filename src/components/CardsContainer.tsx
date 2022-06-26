@@ -1,6 +1,7 @@
 import React from 'react';
 import GeneralCard from './GeneralCard';
 import SpecialCard from './SpecialCard';
+import TableCard from './TableCard';
 
 export default function CardsContainer() {
   return (
@@ -12,7 +13,7 @@ export default function CardsContainer() {
         link={{ text: 'Learn how to prevent infections ', href: 'https://www.health.harvard.edu/staying-healthy/how-to-prevent-infections' }}
         type="cases"
       />
-      <GeneralCard
+      <TableCard
         header={{
           icon: 'list', title: 'Top posts', options: ['Wallstreetbets', 'Bovespa'], select: true,
         }}
