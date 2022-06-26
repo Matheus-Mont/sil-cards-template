@@ -1,10 +1,12 @@
 import { Flex, Text } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CardHeader from './CardHeader';
 import CardLink from './CardLink';
 import CardPostTable from './CardPostTable';
 import GeneralCardInterface from '../services/interfaces/generalCardInterface';
 import api from '../services/axios/api';
+import GeneralCardMainContent from './GeneralCardMainContent';
+import PostsInterface from '../services/interfaces/postsInterface';
 
 const teste = [
   { postTitle: 'Invista seu dinheiro na bolsa, quer saber veja aqui', views: 147852 },
@@ -15,14 +17,24 @@ const teste = [
 const teste2 = '10.009.123';
 
 export default function GeneralCard({ header, link, type }: GeneralCardInterface) {
-  const [isLoading, setIsLoading] = useState(false);
-  const [errLoading, setErrLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [errLoading, setErrLoading] = useState<boolean>(false);
+  const [typeData, setTypeData] = useState('');
+  const [content, setContent] = useState<string | Array<PostsInterface>>('');
 
-  const newSearch = (value: string) => {
+  const newSearch = ({ target }: React.ChangeEvent<HTMLSelectElement>) => {
     setIsLoading(true);
     setErrLoading(false);
-    const a = api.get(`/api/data/${value}`);
+    const a = api
+      .get(`/api/${type}/${target.value}`)
+      .then(({ data }) => {
+
+      });
   };
+
+  useEffect(() => {
+    setTypeData(type);
+  }, []);
 
   return (
     <article>
@@ -33,8 +45,7 @@ export default function GeneralCard({ header, link, type }: GeneralCardInterface
           options={header.options}
           select={header.select}
         />
-        {type === 'cases' ? (
-          <Text>{teste2}</Text>) : (<CardPostTable posts={teste} />)}
+        <GeneralCardMainContent content={content} />
         <CardLink text={link.text} href={link.href} />
       </Flex>
     </article>
