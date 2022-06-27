@@ -14,7 +14,7 @@ export default function SpecialCard({ link }: SpecialCardInterface) {
         base: '40vh', md: '40vh', lg: '47vh', xl: '43vh',
       }}
       h={{
-        base: '20vh', md: '20vh', lg: '27vh', xl: '22vh',
+        base: '20vh', md: '20vh', lg: '20vh', xl: '20vh',
       }}
       color="white"
       bg="#1A365D"
