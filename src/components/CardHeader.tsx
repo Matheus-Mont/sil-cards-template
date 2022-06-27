@@ -13,7 +13,16 @@ export default function CardHeader({
     <Flex justifyContent="space-between">
       <Flex alignItems="center">
         <CardHeaderIcon icon={icon} />
-        <Text mx={4} color="#1a365d" fontSize="lg" fontWeight="800">{title}</Text>
+        <Text
+          mx={4}
+          color="#1a365d"
+          fontSize={{
+            base: 'md', md: '1.3rem', lg: '1.3rem', xl: '1.3rem',
+          }}
+          fontWeight="800"
+        >
+          {title}
+        </Text>
       </Flex>
       {select && (
       <Center>
