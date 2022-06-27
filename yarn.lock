@@ -1093,7 +1093,7 @@
     "@chakra-ui/spinner" "^2.0.2"
     "@chakra-ui/utils" "2.0.2"
 
-"@chakra-ui/anatomy@2.0.1":
+"@chakra-ui/anatomy@2.0.1", "@chakra-ui/anatomy@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@chakra-ui/anatomy/-/anatomy-2.0.1.tgz#3be152b6eaef93e0727cd12d3269b2e4374335d2"
   integrity sha512-lbOUfPmCtgIe0G7Iu6C2MaFP3FKOHgKWxDrYc3498TQ7/z5N1r7AO6jB+gFRGDbxJNLjRGOLG7tV0bufagGTUw==
