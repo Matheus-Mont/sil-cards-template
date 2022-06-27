@@ -10,7 +10,9 @@ export default function PageHeader() {
           src={logo}
           pos="absolute"
           top="5"
-          left={['3vh', '3vh', '20vh', '25vh']}
+          left={{
+            base: '3vh', md: '10vh', lg: '10vh', xl: '25vh',
+          }}
           alt="sil-sistemas-logo"
         />
       </Box>
