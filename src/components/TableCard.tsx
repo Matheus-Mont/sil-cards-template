@@ -48,8 +48,12 @@ export default function TableCard({ header, link, type }: GeneralCardInterface) 
       borderRadius="10"
       direction="column"
       boxShadow="xl"
-      w="43vh"
-      h="27vh"
+      w={{
+        base: '40vh', md: '40vh', lg: '47vh', xl: '43vh',
+      }}
+      h={{
+        base: '25vh', md: '25vh', lg: '27vh', xl: '24vh',
+      }}
       bg="white"
       p={4}
       m={2}
