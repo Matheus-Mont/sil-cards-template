@@ -3,14 +3,16 @@ import React from 'react';
 import { HiArrowRight } from 'react-icons/hi';
 import CardLinkInterface from '../services/interfaces/cardLinkInterface';
 
-export default function CardLink({ text, href, color }: CardLinkInterface) {
+export default function CardLink({
+  text, href, color, arrow,
+}: CardLinkInterface) {
   return (
     <Link href={href}>
       <Flex alignItems="center" as="u" color={color} fontWeight="bold">
         <Text mr="1">
           {text}
         </Text>
-        <HiArrowRight />
+        {arrow && <HiArrowRight />}
       </Flex>
     </Link>
 
