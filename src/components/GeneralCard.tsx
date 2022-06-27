@@ -43,35 +43,33 @@ export default function GeneralCard({ header, link, type }: GeneralCardInterface
   }, []);
 
   return (
-    <article>
-      <Flex
-        borderRadius="10"
-        direction="column"
-        boxShadow="xl"
-        w="40vh"
-        h="30vh"
-        bg="white"
-        p={4}
-        m={2}
-      >
+    <Flex
+      borderRadius="10"
+      direction="column"
+      boxShadow="xl"
+      w="43vh"
+      h="27vh"
+      bg="white"
+      p={4}
+      m={2}
+    >
 
-        <CardHeader
-          icon={header.icon}
-          title={header.title}
-          options={header.options}
-          select={header.select}
-          newSearch={newSearch}
-        />
+      <CardHeader
+        icon={header.icon}
+        title={header.title}
+        options={header.options}
+        select={header.select}
+        newSearch={newSearch}
+      />
 
-        {errLoading && <ErrorScreen value={dataValue} newSearch={buttonSearch} />}
+      {errLoading && <ErrorScreen value={dataValue} newSearch={buttonSearch} />}
 
-        {isLoading && !errLoading ? <Text>Carregando...</Text> : null }
+      {isLoading && !errLoading ? <Text>Carregando...</Text> : null }
 
-        {!isLoading && !errLoading && type === 'cases' ? <GeneralCardMainContent content={content} /> : null}
+      {!isLoading && !errLoading && type === 'cases' ? <GeneralCardMainContent content={content} /> : null}
 
-        <CardLink text={link.text} href={link.href} />
+      <CardLink text={link.text} href={link.href} color="#90CDF4" arrow={link.arrow} />
 
-      </Flex>
-    </article>
+    </Flex>
   );
 }
