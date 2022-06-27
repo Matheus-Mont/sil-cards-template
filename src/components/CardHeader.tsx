@@ -17,7 +17,7 @@ export default function CardHeader({
           mx={4}
           color="#1a365d"
           fontSize={{
-            base: 'md', md: '1.3rem', lg: '1.3rem', xl: '1.3rem',
+            base: 'md', md: '1.3rem', lg: '1.3rem', xl: '1rem',
           }}
           fontWeight="800"
         >
