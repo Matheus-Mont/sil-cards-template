@@ -9,7 +9,7 @@ export default function CardLink({
   return (
     <Link href={href}>
       <Flex alignItems="center" as="u" color={color} fontWeight="bold">
-        <Text mr="1">
+        <Text mr="1" fontFamily="cursive">
           {text}
         </Text>
         {arrow && <HiArrowRight />}
