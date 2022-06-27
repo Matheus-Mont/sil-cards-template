@@ -7,6 +7,7 @@ import api from '../services/axios/api';
 import CardPostTable from './CardPostTable';
 import PostsInterface from '../services/interfaces/postsInterface';
 import ErrorScreen from './ErrorScreen';
+import Loader from './Loader';
 
 export default function TableCard({ header, link, type }: GeneralCardInterface) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -68,7 +69,7 @@ export default function TableCard({ header, link, type }: GeneralCardInterface) 
       />
       {errLoading && <ErrorScreen value={dataValue} newSearch={buttonSearch} />}
 
-      {isLoading && !errLoading ? <Text>Carregando...</Text> : null }
+      {isLoading && !errLoading ? <Loader /> : null }
 
       {!isLoading && !errLoading ? <CardPostTable content={content} /> : null}
 
