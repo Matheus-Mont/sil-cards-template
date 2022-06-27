@@ -10,8 +10,12 @@ export default function SpecialCard({ link }: SpecialCardInterface) {
       borderRadius="10"
       direction="column"
       boxShadow="xl"
-      w="43vh"
-      h="22vh"
+      w={{
+        base: '40vh', md: '40vh', lg: '47vh', xl: '43vh',
+      }}
+      h={{
+        base: '20vh', md: '20vh', lg: '27vh', xl: '22vh',
+      }}
       color="white"
       bg="#1A365D"
       p={4}
