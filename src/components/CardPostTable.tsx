@@ -10,8 +10,22 @@ export default function CardPostTable({ content }: TableInterface) {
     <Flex direction="column" grow="1" justifyContent="center">
       {content.map((post) => (
         <Flex key={post.views} justifyContent="space-between">
-          <Text color="#718096" fontWeight="bold" fontSize="small" maxW="70%">{post.postTitle}</Text>
-          <Text color="#1a365d" fontWeight="bold">{post.views}</Text>
+          <Text
+            color="#718096"
+            fontWeight="bold"
+            fontSize="small"
+            maxW="70%"
+          >
+            {post.postTitle}
+
+          </Text>
+          <Text
+            color="#1a365d"
+            fontWeight="bold"
+          >
+            {post.views}
+
+          </Text>
         </Flex>
       ))}
     </Flex>
