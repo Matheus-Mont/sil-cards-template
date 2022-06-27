@@ -11,7 +11,6 @@ export default function CardsContainer() {
         base: 'absolute', md: 'absolute', lg: 'absolute', xl: 'absolute',
       }}
       top="15vh"
-      // w={['100%', '100%', '100%', '100%']}
       flexDirection={
         {
           base: 'column', md: 'row', lg: 'row', xl: 'row',
