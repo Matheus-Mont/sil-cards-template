@@ -7,7 +7,13 @@ import TableCard from './TableCard';
 export default function CardsContainer() {
   return (
     <section>
-      <Flex>
+      <Flex
+        pos="absolute"
+        top="15vh"
+        left={['3vh', '3vh', '20vh', '29vh']}
+        right={['3vh', '3vh', '20vh', '29vh']}
+        maxWidth="80%"
+      >
 
         <GeneralCard
           header={{
