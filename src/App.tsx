@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import PageHeader from './components/PageHeader';
 import './services/miragejs';
 import CardsTemplate from './pages/CardsTemplate';
 
