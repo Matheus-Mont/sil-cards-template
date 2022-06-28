@@ -62,14 +62,6 @@ Após o fim da instalação, inicie a aplicação:
 Uma página se abrirá automaticamente no seu navegador com a aplicação carregada
 
 OBS: Acesse pela url http://localhost:3000/
-## Rodando os testes
-
-Para rodar os testes, rode o seguinte comando
-
-```bash
-  npm run test
-```
-Nesse projeto ocorrem 2 tipos de testes, os de backend e os de frontend. Utilize o comando acima quando estiver em alguma das pastas indicadas.
 
 ## Feedback
 
