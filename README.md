@@ -1,46 +1,82 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sil-cards-template
+A aplicação é uma página simples de renderização de um conjunto de cards, cada um contendo um conteúdo distinto, podendo este ser dinâmico ou não.
+## Autores
 
-## Available Scripts
+- [@matheusmonteiro](https://github.com/Matheus-Mont)
 
-In the project directory, you can run:
 
-### `yarn start`
+## Stacks utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Front-end:** Reactjs (Hooks), Typescript, Chakra-Ui, MirageJs e Axios
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Testes:** Jest, React Testing Library.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Funcionalidades
 
-### `yarn build`
+* Visualização dos cards;
+    * Seleção dos dados a serem visualizados através dos selects presentes nos cards;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Um pouco da teoria
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O front-end é composto por uma página única
+que contém um header contendo a logo da empresa Sil-Sistemas, e um espaço
+onde os cards são renderizados. O primeiro é um card contendo o número de casos
+de COVID nos estados Rio de Janeiro, São Paulo e Minas Gerais. O segundo
+é um conjunto de posts e seu respectivo número de visualizações, relacionados aos
+termos Wallstreetbets e Bovespa. O último é um texto estático relacionado à
+Trustpilot.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Os dois primeiros cards possuem conteúdo dinâmico, sendo este recuperado de uma
+falsa API criada utilizando MirageJS.
+## Requisitos para utilizar
 
-### `yarn eject`
+* [Yarn](https://yarnpkg.com/)
+* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+## Pré-instalação
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Clone o repositório para sua máquina inserindo no seu terminal o comando
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  git clone git@github.com:Matheus-Mont/sil-cards-template.git
+```
+Entre na pasta onde o clone foi feito com o comando
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+  cd To-Do-Ebyrt
+```
+## Instalação
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Na pasta raiz (/sil-cards-template), instale as dependências do projeto com yarn
 
-## Learn More
+```bash
+  yarn install
+```
+Após o fim da instalação, inicie a aplicação:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  yarn start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Uma página se abrirá automaticamente no seu navegador com a aplicação carregada
+
+OBS: Acesse pela url http://localhost:3000/
+## Rodando os testes
+
+Para rodar os testes, rode o seguinte comando
+
+```bash
+  npm run test
+```
+Nesse projeto ocorrem 2 tipos de testes, os de backend e os de frontend. Utilize o comando acima quando estiver em alguma das pastas indicadas.
+
+## Feedback
+
+Primeiramente, muito obrigado pelo seu tempo e por usar minha aplicação! 
+Saiba que se você tiver algum feedback, eu vou adorar escutar!
+
+Por favor me deixe saber por meio do meu [Linkedin](https://www.linkedin.com/in/matheusoliveiramonteiro/)
+ou entre em contato pelo email: dev.matheusmonteiro@gmail.com
+
+Até logo!
