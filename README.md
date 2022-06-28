@@ -41,10 +41,10 @@ Clone o repositório para sua máquina inserindo no seu terminal o comando
 ```bash
   git clone git@github.com:Matheus-Mont/sil-cards-template.git
 ```
-Entre na pasta onde o clone foi feito com o comando
+Navegue para a pasta onde o clone foi feito com o comando
 
 ```bash
-  cd To-Do-Ebyrt
+  cd sil-cards-template
 ```
 ## Instalação
 
